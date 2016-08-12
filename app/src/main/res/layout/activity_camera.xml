@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true">
+
+        <com.snnu.yefan.custom.RadarViewGroup
+            android:id="@+id/radar"
+            android:layout_width="280dp"
+            android:layout_height="280dp">
+            <com.snnu.yefan.custom.RadarView
+                android:id="@+id/id_scan_circle"
+                android:layout_width="280dp"
+                android:layout_height="280dp" />
+
+        </com.snnu.yefan.custom.RadarViewGroup>
+    </RelativeLayout>
+
+    <com.opendanmaku.DanmakuView
+        android:id="@+id/danmakuView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:end_Y_offset="0.8"
+        app:max_row="12"
+        app:max_running_per_row="5"
+        app:pick_interval="200"
+        app:show_debug="false"
+        app:start_Y_offset="0.2" />
+
+    <RelativeLayout
+        android:id="@+id/ry_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:clipChildren="false">
+
+        <com.snnu.yefan.custom.CustomViewPager
+            android:id="@+id/vp"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_lock"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/img_lock"/>
+
+        <ImageView
+            android:id="@+id/img_rard"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/img_rard"/>
+
+        <ImageView
+            android:id="@+id/img_select"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/img_select"/>
+
+        <ImageView
+            android:id="@+id/img_barrage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/img_barrage"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:src="@mipmap/img_close"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/bottompanel"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etInput"
+            android:hint="发送弹幕"
+            android:layout_toLeftOf="@id/btnAdd"
+            android:layout_alignParentBottom="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <com.snnu.yefan.view.RadarViewGroup
+            android:id="@+id/radar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.snnu.yefan.view.RadarView
+                android:id="@+id/id_scan_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.snnu.yefan.view.RadarViewGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/danmakulayout"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_above="@id/bottompanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
